@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://weizheweng.github.io/weather_t/",
   "scripts": {
     "dev": "concurrently \"vite dev\" \"tsc --noEmit --watch\" \"esw -w src --ext .ts,.tsx\"",
     "build": "tsc && vite build",
