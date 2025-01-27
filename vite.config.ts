@@ -10,7 +10,7 @@ const ENV_PREFIX = 'REACT_APP_'
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, 'env', ENV_PREFIX)
   return {
-    base: './',
+    base: '/weather_t/',
     plugins: [
       react(),
       svgr(),
