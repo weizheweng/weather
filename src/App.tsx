@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import './global.css'
 import { Weather } from './components/Weather'
 
@@ -7,7 +7,8 @@ export function App () {
     {
       path: '/',
       children: [
-        { path: '/', element: <Weather /> },
+        { path: '/', element: <Navigate to="/weather" replace /> },
+        { path: '/weather', element: <Weather /> },
         { path: '*', element: 'NotFound' },
       ],
     },
