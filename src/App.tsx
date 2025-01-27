@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './global.css'
-import CssBaseline from '@mui/material/CssBaseline'
 import { Weather } from './components/Weather'
 
 export function App () {
@@ -8,20 +7,13 @@ export function App () {
     {
       path: '/',
       children: [
-        {
-          path: '/',
-          element: (
-            <Weather />
-          ),
-        },
+        { path: '/', element: <Weather /> },
+        { path: '*', element: 'NotFound' },
       ],
     },
   ])
 
   return (
-    <>
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </>
+    <RouterProvider router={router} />
   )
 }
