@@ -1,6 +1,6 @@
 import React from 'react'
 import { Stack } from '@mui/material'
-
+import bgImage from '@assets/images/homepage.svg'
 interface WeatherProps {
   children?: React.ReactNode,
 }
@@ -13,7 +13,7 @@ export function WeatherBg ({ children }: WeatherProps) {
       alignItems="center"
       color="#ffffff"
       sx={{
-        backgroundImage: 'url(/assets/images/homepage.svg)',
+        backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
